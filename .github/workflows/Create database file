@@ -1,0 +1,70 @@
+
+ALTER TABLE Current_Students_Entries DROP PRIMARY KEY;
+ALTER TABLE Archive_Students_Entries DROP PRIMARY KEY;
+ALTER TABLE Literal_Trash_Can DROP PRIMARY KEY;
+ALTER TABLE Majors DROP PRIMARY KEY;
+ALTER TABLE Advisors DROP PRIMARY KEY;
+ALTER TABLE Login DROP PRIMARY KEY;
+
+/*When you run scripts it drops these tables*/
+DROP TABLE Current_Students_Entries;
+DROP TABLE Archive_Students_Entries;
+DROP TABLE Literal_Trash_Can;
+DROP TABLE Majors;
+DROP TABLE Advisors;
+DROP TABLE Login;
+
+/*When you run scripts it then creates these new tables after dropping old ones*/
+CREATE TABLE Current_Students_Entries(M VARCHAR(9) PRIMARY KEY, First_Name VARCHAR(20), Last_Name VARCHAR(20),Major_1 VARCHAR(30), Major_2 VARCHAR(30), Major_3 VARCHAR(30), Minor_1 VARCHAR(30),Minor_2 VARCHAR(30),Advisor VARCHAR(50),Pre_Med VARCHAR(1),Pre_Engineering VARCHAR(1), MNU_Start_Date DATE, Expected_Grad_Date DATE ,MNU_email VARCHAR(30),Date_of_Survey DATETIME);
+
+CREATE TABLE Archive_Students_Entries(M VARCHAR(9) , First_Name VARCHAR(20), Last_Name VARCHAR(20),Major_1 VARCHAR(30), Major_2 VARCHAR(30), Major_3 VARCHAR(30), Minor_1 VARCHAR(30),Minor_2 VARCHAR(30),Advisor VARCHAR(50),Pre_Med VARCHAR(1),Pre_Engineering VARCHAR(1), MNU_Start_Date DATE, Expected_Grad_Date DATE,MNU_email VARCHAR(30),Date_of_Survey DATETIME);
+
+
+CREATE TABLE Literal_Trash_Can(M VARCHAR(9), First_Name VARCHAR(20), Last_Name VARCHAR(20),Major_1 VARCHAR(30), Major_2 VARCHAR(30), Major_3 VARCHAR(30), Minor_1 VARCHAR(30),Minor_2 VARCHAR(30),Pre_Med VARCHAR(1),Pre_Engineering VARCHAR(1), MNU_Start_Date DATE, Expected_Grad_Date DATE,MNU_email VARCHAR(30),Date_of_Survey DATE, Major VARCHAR(30), Advisor VARCHAR(30), Username VARCHAR(30), Password VARCHAR(30));
+
+CREATE TABLE Majors (Major VARCHAR(30)PRIMARY KEY);
+
+CREATE TABLE Advisors (Advisor VARCHAR(30)PRIMARY KEY);
+
+CREATE TABLE Login (Username VARCHAR(30) PRIMARY KEY, Password VARCHAR(30));
+
+/*Insert Majors into the Tables*/
+INSERT INTO Majors (Major) VALUES ("NA");
+INSERT INTO Majors VALUES ("Mathematics");
+INSERT INTO Majors VALUES ("Computer Science");
+INSERT INTO Majors VALUES ("Physics");
+INSERT INTO Majors VALUES ("Biology");
+INSERT INTO Majors VALUES ("Chemistry");
+INSERT INTO Majors VALUES ("Forensic Science");
+INSERT INTO Majors VALUES ("Kinesiology:pre-Occupational Therapy");
+INSERT INTO Majors VALUES ("Kinesiology:pre-Physical Therapy");
+INSERT INTO Majors VALUES ("Kinesiology:pre-Athletic Training");
+INSERT INTO Majors VALUES ("Kinesiology:pre-Chiropractics");
+INSERT INTO Majors VALUES ("Kinesiology:pre-Health Promotion & Fitness/Exercise");
+INSERT INTO Majors VALUES ("Math Education");
+INSERT INTO Majors VALUES ("Physical Education");
+INSERT INTO Majors VALUES ("Recreation and Leisure");
+INSERT INTO Majors VALUES ("Undeclared");
+INSERT INTO Majors VALUES ("Other");
+
+
+/*Insert Advisors into the Tables*/
+INSERT INTO Advisors (Advisor) VALUES ("NA");
+INSERT INTO Advisors (Advisor) VALUES ("I don't know");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Mark Brown");
+INSERT INTO Advisors (Advisor) VALUES ("Teresa Hale-Lespier");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Andrew Overholt");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Jordan Mantha");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Jill Speicher");
+INSERT INTO Advisors (Advisor) VALUES ("James Leininger");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Rion Taylor");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Abby Hodges");
+INSERT INTO Advisors (Advisor) VALUES ("Leigh Kreshel");
+INSERT INTO Advisors (Advisor) VALUES ("Dr. Chris Crawford");
+INSERT INTO Advisors (Advisor) VALUES ("Brad King");
+INSERT INTO Advisors (Advisor) VALUES ("Other");
+
+
+
+
+
